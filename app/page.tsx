@@ -10,10 +10,9 @@ import Skills from './skills';
 export default function Home() {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [isBlackBg, setIsBlackBg] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef('');
 
   const onClickBckgroundChange = () => {
-    console.log(">>>>> bhack ground change clicked");
     setIsBlackBg(prevState => !prevState);
   }
 
