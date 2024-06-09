@@ -1,0 +1,650 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.h-100v{
+  height: 100vh;
+}
+.h-110v{
+  height: 105vh;
+}
+.h-100-p{
+  height: 100%;
+}
+.w-100-p{
+  width: 100%;
+}
+.bg-white{
+  background-color: white;
+}
+.c-white{
+  color: white;
+}
+
+.max-h-100v{
+max-height: 100vh;
+}
+.min-h-100v{
+  min-height: 100vh;
+}
+.text-underline{
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.overflow-hide{
+  overflow: hidden;
+}
+.d-flex{
+  display: flex;
+}
+.f-d-row{
+  flex-direction: row;
+}
+.f-d-column{
+  flex-direction: column;
+}
+.jus-content-center{
+  justify-content: center;
+}
+.j-c-space-around{
+  justify-content: space-around;
+}
+.al-center{
+  align-items: center;
+}
+.al-stretch{
+  align-items: stretch;
+}
+.al-center{
+  align-items: center;
+}
+.p-all-10{
+  padding: 2rem;
+}
+.m-all-10{
+  margin: 1rem;
+}
+.m-all-30{
+  margin: 3rem;
+}
+.border-none{
+  border: none;
+}
+.thin-line-border-white{
+  border: 0.7px solid ;
+  border-image: linear-gradient(to right, white, #1f80c4) 1;
+}
+.b-radius-5{
+  border-radius: 0.5rem;
+}
+.my-profile-icon{
+  height: 14rem;
+  width: 14rem;
+  cursor: pointer;
+  border-width: 0.5px;
+  border-style: solid white;
+  border-radius: 8rem;
+}
+
+.brief-container{
+  border: 0.5px solid white;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+.fs-15{
+  font-size: 1.5rem;
+}
+.project-list {
+  list-style-type: disc; /* or 'circle' or 'square' */
+  color: white; /* Set the color of the bullets to white */
+}
+.m-l-20{
+  margin-left: 2rem;
+}
+.profile-bg{
+  background-image: url('https://port2bucket.s3.amazonaws.com/jo3.jpeg');
+  background-size: cover;
+}
+.my-projects-div{
+  cursor: pointer;
+  border-width: 0.5px;
+  border-style: solid white;
+  border-radius: 1rem;
+  transition: width 1s, height 2s;
+}
+.expand-div{
+  height: 26rem;
+  width: 66rem;
+}
+
+.desc-div {
+  display: none;
+  transition: opacity 0.5s ease-in-out; /* Add a transition property */
+  opacity: 0; /* Start with opacity 0 */
+}
+
+.expand-desc-div {
+  display: block;
+  opacity: 1; /* Change opacity to 1 when expanded */
+}
+.hide{
+  display: none;
+  transition: display 2s;
+}
+.project-desc{
+  display: block;
+}
+.height-mc{
+  height: max-content;
+}
+.f-w-8{
+  font-weight: 800;
+}
+.al-fs{
+  align-items: flex-start;
+}
+.first-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.animated-div {
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-img-div{
+  height: 35rem;
+  width: 25rem;
+  border: 0.5px solid white;
+  border-radius: 1rem;
+  background-image: url('https://port2bucket.s3.amazonaws.com/face_blue1.jpeg');
+  background-size: cover;
+}
+.intro-img-div-black{
+  height: 35rem;
+  width: 25rem;
+  border: 0.5px solid white;
+  border-radius: 1rem;
+  background-image: url('https://port2bucket.s3.amazonaws.com/face-balck1.jpeg');
+  background-size: cover;
+
+}
+
+.d-flex{
+  display: flex;
+}
+.flex-r{
+  flex-direction: row;
+}
+.all-center{
+  align-items: center;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-start{
+  justify-content: start;
+}
+.justify-end{
+  justify-content: end;
+}
+.justify-space-btw{
+  justify-content: space-between;
+}
+.justify-space-around{
+  justify-content: space-around;
+}
+.m-1-r{
+  margin: 1rem;
+}
+.pointer{
+  cursor: pointer;
+}
+.h-3r{
+  height: 3rem;
+}
+.w-3r{
+  width: 3rem;
+}
+.font-mo{
+  font-family: 'montserratthin_italic Regular 400';
+}
+.fs-12{
+  font-size: 1.2rem;
+}
+.fs-15{
+  font-size: 1.5rem;
+}
+.fs-20{
+  font-size: 2rem;
+}
+.fs-30{
+  font-size: 3rem;
+}
+.fs-25{
+  font-size: 2.5rem;
+}
+.download-button{
+  border: 0.5px solid white;
+  border-radius: 1rem;
+  height: 3rem;
+  width: 10rem;
+}
+.text-underline{
+  text-decoration: underline;
+}
+.fw-bold{
+  font-weight: bold;
+}
+.margin-top-10{
+  margin-top: 1rem;
+  }
+.margin-top-15{
+margin-top: 1.5rem;
+}
+/* .intro-circle-button{
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid white;
+  border-radius: 2rem;
+  transition: width 1s, height 1s;
+}
+.intro-circle-button:hover{
+  height: 3rem;
+  width: 3rem;
+}
+
+.intro-icon-img{
+  max-width: 100%;
+    height: 1.8rem;
+    width: 2rem;
+} */
+
+.intro-circle-button {
+  
+      display: inline-block;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid white;
+}
+
+.intro-circle-button:hover {
+  transform: scale(1.2); 
+}
+
+.intro-icon-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.margin-b-1r{
+  margin-bottom: 1rem;
+}
+.mr-80{
+  margin: 8rem;
+}
+
+.margin-left-2r{
+  margin-left: 2rem;
+}
+.margin-top-5px{
+  margin-top: 0.5rem;
+}
+.margin-top-1r{
+  margin-top: 1rem;
+}
+.h-95v{
+  height: 95vh;
+}
+.h-90v{
+  height: 90vh;
+}
+.w-80{
+  width: 80vw;
+}
+.pos-absolute{
+  position: absolute
+}
+.pos-fixed{
+  position: fixed;
+}
+.r-0{
+  right: 5rem;
+}
+.project-heading-div{
+  padding: 1rem;
+  PADDING-LEFT: 0REM;
+  padding-bottom: 0.7rem;
+  padding-right: 0rem;
+}
+.project-heading-div-black{
+  border-bottom: 0.5px solid black;
+  padding: 1rem;
+  PADDING-LEFT: 0REM;
+  padding-bottom: 0.7rem;
+  padding-right: 0rem;
+  
+}
+.pd-underline-white{
+  border-bottom: 0.5px solid white;
+}
+.pd-underline-black{
+  border-bottom: 0.5px solid black;
+}
+.ul-disc{
+  list-style: disc;
+}
+.f-italic{
+  font-style: italic;
+}
+
+.mode-div{
+  height: 2rem;
+  width: 2rem;
+  background-color: #6d7ed0;
+}
+.p-all-100{
+  padding: 10rem;
+}
+.p-all-110{
+  padding: 11rem;
+}
+.exp-div{
+  text-align: left;
+  word-spacing: 0.2rem;
+  line-height: 1.7rem;
+}
+
+.navbar-div{
+  min-height: 3rem;
+  max-height: 3rem;
+  margin-top: 3rem;
+  position: fixed;
+    top: 0;
+    width: 98vw;
+    border-bottom: 0.5px solid white;
+    margin: 0rem;
+    padding: 3rem;
+    
+    width: 100%;
+    z-index: 2;
+}
+.navbar-div-blue{
+  background-color: #6d7ed0;
+
+}
+.navbar-div-black{
+  background-color:  #292928;
+}
+.into-img-div-mobile{
+  display: none;
+}
+.intro-hello-mobile{
+  display: none;
+}
+.name-intro{
+  border: none;
+}
+.skills-parent-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.exp-border-div{
+  border-right: 0.5px solid white;
+  width: 70vw;
+}
+.exp-border-div-black{
+  border-right: 0.5px solid black;
+  width: 70vw;
+}
+.skills-border-div{
+  width: 30vw;
+}
+.skill-heading-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ml-20{
+  margin-left: 2rem;
+}
+.top-bg{
+  
+  background-size: cover;
+}
+.top-bg-blue{
+  background-image: url('https://port2bucket.s3.amazonaws.com/bluebg.svg');
+
+}
+.top-bg-black{
+  background-image: url('https://port2bucket.s3.amazonaws.com/black_and_white_bg.jpg');
+}
+.mode-icon-blue{
+  right: 1.5rem;
+  margin-top: 1rem;
+  position: fixed;
+  height: 3rem;
+  width: 3rem;
+}
+.mode-icon-black{
+  right: 1.5rem;
+    margin-top: 1rem;
+    position: fixed;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid white;
+}
+.br-2{
+  border-radius: 2rem;
+}
+.w-70v{
+  width: 70vw;
+}
+.w-30v{
+  width: 30vw;
+}
+.w-78{
+  width: 78%;
+}
+
+@media only screen and (max-width: 600px) {
+  .w-70v{
+    width: 100%;
+  }
+  .w-78{
+    width: 100%;
+  }
+  .p-all-10{
+    padding: 1.5rem;
+  }
+  .mode-icon-black{
+    border-radius: 2.5rem;
+    height: 3rem;
+    width: 3rem;
+    right: 5.5rem;
+
+
+  }
+  .mode-icon-blue{
+    right: 5.5rem;
+  }
+  .mode-black-img{
+    border-radius: 3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  .ml-20{
+    margin-left: 0rem;
+  }
+  .skill-heading-div{
+    width: 90%;
+  }
+  .exp-border-div{
+    width: 100vw;
+  }
+  .exp-border-div-black{
+    width: 100vw;
+    display: none;
+  }
+  .skills-border-div{
+    width: 100vw;
+  }
+  .skills-parent-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .navbar-div {
+    display: none;
+  }
+
+  .intro-main-div{
+    flex-direction: column;
+    justify-content:flex-start
+  }
+  .intro-img-div{
+    display: none;
+  }
+  .intro-img-div-black{
+    display: none;
+  }
+  .intro-img-div-mobile{
+    min-height: 15rem;
+    min-width: 15rem;
+    border: 0.5px solid white;
+    border-radius: 1rem;
+    background-image: url('https://port2bucket.s3.amazonaws.com/face_blue1.jpeg');
+      background-size: cover; 
+  }
+  .intro-img-div-mobile-black{
+    min-height: 15rem;
+    min-width: 15rem;
+    border: 0.5px solid white;
+    border-radius: 1rem;
+    background-image: url('https://port2bucket.s3.amazonaws.com/face-balck1.jpeg');
+      background-size: cover; 
+  }
+  .intro-hello-mobile{
+    display: block;
+  }
+  .intro-hello-web{
+    display: none;
+  }
+  .top-bg{
+    background-image: none;
+    background-color: #6c90d3;
+  }
+  .p-all-100{
+    padding: 3rem;
+  }
+  .fs-20{
+    font-size: 1.5rem;
+  }
+  .name-intro{
+    text-align: center;
+  }
+  .project-du-div{
+    display: none;
+  }
+  .h-110v{
+    height: auto;
+  }
+}
+
+.bg-voilet{
+  background-color:  #6c90d3;
+}
+.bg-blue{
+  background-color:  #6d7ed0;
+}
+.bg-dark-white{
+   background-color: #c7c6c5;
+   color: black;
+}
+.bg-light-white{
+  background-color: #E8E7E6;
+  color: black;
+}
+h2.project-name-div{
+  transform: translateX(-150%);
+  opacity: 0;
+}
+h2.project-du-div {
+  transform: translateX(150%);
+  opacity: 0;
+}
+.skills-heading-div{
+  border: 0.5px solid white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.skills-du-div{
+  border: 0.5px solid white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.slide-in {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  transition: transform 1s ease, opacity 1s ease;
+}
+.w-50v{
+  width: 50vw;
+}
+
+
+.mr-10{
+  margin-right: 1rem;
+}
+.mr-20{
+  margin-right: 2rem;
+}
